@@ -1,5 +1,4 @@
 from math import pi
-
 # Clase circulo
 class Circulo():
     
@@ -9,7 +8,7 @@ class Circulo():
         if (radio <= 0):
             # Retornamos un error en caso de recibir un radio incorrecto
             raise ValueError('Ups.. El radio ingresado es menor o igual a 0, tiene que ser mayor a 0. Vuelve a ingresar uno nuevamente!')
-        self._radio = radio
+        self._radio:int = radio
         
     # Metodo property del atributo radio encapsulado    
     @property
@@ -24,16 +23,16 @@ class Circulo():
             # Retornamos un error en caso de recibir un radio incorrecto
             raise ValueError('Ups.. Quisiste cambiar el radio por uno menor o igual a 0, tiene que ser mayor a 0. Vuelve a ingresar uno nuevamente!')
         # Asignamos un nuevo valor a el atributo radio de la clase
-        self._radio = radio
+        self._radio:int = radio
     
     # Metodo que devuelve el area del circulo
-    def calculationArea(self)->int:
-        area = pi * self.radio ** 2
+    def calculationArea(self)->float:
+        area:float = pi * self.radio ** 2
         return round(area,2)
     
     # Metodo que devuelve el parametro del circulo
-    def calculationPerimeter(self)->int:
-        perimeter = 2 * pi * self.radio
+    def calculationPerimeter(self)->float:
+        perimeter:float = 2 * pi * self.radio
         return round(perimeter,2)
     
     # Metodo str de la clase que permite realizar representaciones mas amigables
@@ -47,5 +46,6 @@ class Circulo():
             # Retornamos un error en caso de recibir un numero incorrecto
             raise ValueError('Ups.. Has intentado multiplicar un radio por un numero menor o igual a 0. Eso no esta permitido, vuelve a ingresar uno nuevamente!')
         # Instanciamos un nuevo objeto con la multiplicacion del radio
-        nuevoCirculo = Circulo(self.radio*num)
+        nuevoCirculo:object = Circulo(self.radio*num)
         return nuevoCirculo
+
