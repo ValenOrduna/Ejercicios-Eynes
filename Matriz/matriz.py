@@ -33,7 +33,7 @@ def detectVerticalNumber(matriz):
 def main():
     """ Creamos una matriz randomizada utilizando la funcion randint del modulo random de numpy
         como primer parametro le pasamos el numero maximo a generar aleatoriamente
-        y como segundo parametro el tamaño de lista a generar
+        y como segundo parametro el tamaño de lista a generar.
     """
     matriz = np.random.randint(3, size=(5, 5))
     # Mostramos la matriz en la consola
